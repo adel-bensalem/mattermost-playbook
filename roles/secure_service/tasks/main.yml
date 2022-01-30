@@ -1,0 +1,14 @@
+- name: Create SSL certificate directory
+  file:
+    path: /srv/checkout/volumes/web/cert
+    state: directory
+
+- name: Move SSL certifcate
+  file:
+    path: cert.pem
+    dest: /srv/checkout/volumes/web/cert
+
+- name: Move SSL key
+  file:
+    path: key-no-password.pem
+    dest: /srv/checkout/volumes/web/cert

@@ -1,0 +1,20 @@
+- name: Create required CONFIG directories
+  file:
+    path: "/srv/checkout/volumes/app/mattermost/{{ item }}"
+    state: directory
+  with_items:
+    - config
+    - data
+    - logs
+    - plugins
+    - client/plugins
+    - bleve-indexes
+
+- name: Change config directory's permissions
+  shell: chown -R 2000:2000 /srv/checkout/volumes/app/mattermost
+
+- name: Replace env file
+  template:
+    src: .env.j2
+    dest: /srv/checkout/.env
+

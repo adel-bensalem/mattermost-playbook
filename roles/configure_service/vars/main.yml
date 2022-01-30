@@ -1,0 +1,8 @@
+db_user: mattermost-admin
+db_password: VHsXaqXBPaxY9Bge
+db_name: mattermost
+db_host: tsec-mysql.cicvirr4isxy.eu-west-3.rds.amazonaws.com
+domain_name: com.plancke.me
+mattermost_plan: mattermost-enterprise-edition
+mattermost_version: 5.34
+app_port: 8065

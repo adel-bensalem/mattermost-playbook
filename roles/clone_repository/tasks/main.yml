@@ -1,0 +1,5 @@
+- name: Clone Mattermost Docker repository
+  git:
+    repo: 'https://github.com/mattermost/docker.git'
+    dest: /srv/checkout
+

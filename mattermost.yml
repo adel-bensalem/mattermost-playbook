@@ -1,0 +1,8 @@
+- name: Install Mattermost
+  hosts: all
+  roles:
+    - install_deps
+    - clone_repository
+    - configure_service
+    - secure_service
+    - run_service
